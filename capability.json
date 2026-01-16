@@ -1,0 +1,52 @@
+{
+  "name": "chromadb-retrieval",
+  "version": "1.0.0",
+  "type": "capability",
+  "description": "Vector search + ingestion using ChromaDB with internal embedding generation.",
+  "provides": ["vector-search"],
+  "requires": [],
+  "api": {
+    "endpoint": "http://localhost:8801",
+    "type": "REST",
+    "health_check": "/health"
+  },
+  "resources": {
+    "ram_mb": 1500,
+    "cpu_cores": 2,
+    "storage_mb": 2000,
+    "accelerator": "none"
+  },
+  "endpoints": {
+    "health": {
+      "method": "GET",
+      "path": "/health",
+      "input": "none",
+      "output": "application/json"
+    },
+    "capability": {
+      "method": "GET",
+      "path": "/.well-known/capability.json",
+      "input": "none",
+      "output": "application/json"
+    },
+    "ingest": {
+      "method": "POST",
+      "path": "/collections/{collection}/documents",
+      "input": "application/json",
+      "output": "application/json"
+    },
+    "query": {
+      "method": "POST",
+      "path": "/collections/{collection}/query",
+      "input": "application/json",
+      "output": "application/json"
+    }
+  },
+  "container": {
+    "image": "localhost/ezansi-capability-retrieval-chromadb:1.0.0",
+    "port": 8801,
+    "restart_policy": "unless-stopped"
+  },
+  "target_platform": "Raspberry Pi 4/5",
+  "notes": "Embeddings are generated inside this capability to keep the first lesson simple."
+}

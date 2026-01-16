@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  chromadb-retrieval:
+    build:
+      context: .
+      dockerfile: Containerfile
+    image: localhost/ezansi-capability-retrieval-chromadb:1.0.0
+    container_name: chromadb-retrieval-capability
+    ports:
+      - "8801:8801"
+    volumes:
+      - chroma-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8801/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  chroma-data:
+    driver: local
