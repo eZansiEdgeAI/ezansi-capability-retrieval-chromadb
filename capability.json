@@ -48,5 +48,7 @@
     "restart_policy": "unless-stopped"
   },
   "target_platform": "Raspberry Pi 4/5",
+  "target_platforms": ["Raspberry Pi 4/5", "AMD64 (x86-64)"],
+  "supported_architectures": ["arm64", "amd64"],
   "notes": "Embeddings are generated inside this capability to keep the first lesson simple."
 }
