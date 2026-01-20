@@ -1,0 +1,9 @@
+# Raspberry Pi 4 (8GB) suggested runtime profile.
+# Applied via: podman-compose -f podman-compose.yml -f podman-compose.pi4.yml up -d --build
+profile: pi4-8gb
+resources:
+  cpu_cores: 2
+  ram_mb: 1500
+  storage_mb: 2000
+embedding:
+  model: BAAI/bge-small-en-v1.5

@@ -1,0 +1,9 @@
+# AMD64 (24GB) suggested runtime profile.
+# Applied via: podman-compose -f podman-compose.yml -f podman-compose.amd64.yml up -d --build
+profile: amd64-24gb
+resources:
+  cpu_cores: 2
+  ram_mb: 2000
+  storage_mb: 2000
+embedding:
+  model: BAAI/bge-small-en-v1.5

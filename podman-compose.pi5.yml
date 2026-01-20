@@ -1,0 +1,14 @@
+version: '3.8'
+
+# Raspberry Pi 5 overrides for the chromadb-retrieval capability stack.
+# Usage:
+#   podman-compose -f podman-compose.yml -f podman-compose.pi5.yml up -d --build
+
+services:
+  chroma:
+    mem_limit: 2g
+    cpus: 3.0
+
+  chromadb-retrieval:
+    mem_limit: 2g
+    cpus: 3.0

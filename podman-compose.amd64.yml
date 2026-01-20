@@ -1,0 +1,15 @@
+version: '3.8'
+
+# AMD64 overrides for the chromadb-retrieval capability stack.
+# Usage:
+#   podman-compose -f podman-compose.yml -f podman-compose.amd64.yml up -d --build
+
+services:
+  chroma:
+    # Conservative defaults; tune as needed.
+    mem_limit: 2g
+    cpus: 2.0
+
+  chromadb-retrieval:
+    mem_limit: 2g
+    cpus: 2.0
