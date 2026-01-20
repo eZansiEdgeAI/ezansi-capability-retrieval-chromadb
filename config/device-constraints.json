@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "chromadb-retrieval device profiles",
+  "notes": "These profiles are guidance for running the stack on common edge devices. Apply via compose override files (podman-compose.*.yml).",
+  "profiles": {
+    "pi4-8gb": {
+      "cpu_cores": 2,
+      "ram_mb": 1500,
+      "storage_mb": 2000
+    },
+    "pi5-16gb": {
+      "cpu_cores": 3,
+      "ram_mb": 2000,
+      "storage_mb": 2000
+    },
+    "amd64-24gb": {
+      "cpu_cores": 2,
+      "ram_mb": 2000,
+      "storage_mb": 2000
+    },
+    "amd64-32gb": {
+      "cpu_cores": 4,
+      "ram_mb": 4000,
+      "storage_mb": 4000
+    }
+  }
+}

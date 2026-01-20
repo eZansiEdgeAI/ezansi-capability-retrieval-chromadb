@@ -1,6 +1,21 @@
 version: '3.8'
 
 services:
+  chroma:
+    image: docker.io/chromadb/chroma:0.5.20
+    container_name: chromadb-retrieval-chroma
+    volumes:
+      - chroma-data:/data
+    restart: unless-stopped
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v2/heartbeat"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
   chromadb-retrieval:
     build:
       context: .
@@ -10,8 +25,15 @@ services:
     ports:
       - "8801:8801"
     volumes:
-      - chroma-data:/data
+      - embedding-cache:/cache
+    environment:
+      - CHROMA_HTTP_HOST=chroma
+      - CHROMA_HTTP_PORT=8000
+      - XDG_CACHE_HOME=/cache
+      - HF_HOME=/cache/hf
     restart: unless-stopped
+    depends_on:
+      chroma:
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8801/health"]
       interval: 30s
@@ -21,4 +43,6 @@ services:
 
 volumes:
   chroma-data:
+    driver: local
+  embedding-cache:
     driver: local
