@@ -10,7 +10,7 @@ ChromaDB Retrieval capability for eZansiEdgeAI.
 
 - Docs index: `docs/README.md`
 - Architecture: `docs/architecture.md`
-- Deployment: `docs/deployment-guide.md` (and `docs/deployment-guide-amd64.md`)
+- Deployment: `docs/deployment-guide.md` (and `docs/deployment-guide-raspberry-pi.md`, `docs/deployment-guide-amd64.md`)
 - Roadmap: `docs/development-roadmap.md`
 - Performance tuning: `docs/performance-tuning.md`
 - Troubleshooting: `docs/troubleshooting.md`

@@ -7,6 +7,7 @@ This folder contains operational and design documentation for the `chromadb-retr
 - [Architecture](architecture.md)
 - [Capability contract](capability-contract-spec.md)
 - [Deployment guide](deployment-guide.md)
+- [Deployment guide (Raspberry Pi)](deployment-guide-raspberry-pi.md)
 - [Deployment guide (AMD64)](deployment-guide-amd64.md)
 - [Development roadmap](development-roadmap.md)
 - [Performance tuning](performance-tuning.md)
