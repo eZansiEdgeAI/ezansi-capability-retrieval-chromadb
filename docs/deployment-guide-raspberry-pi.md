@@ -22,6 +22,15 @@ Starting point:
 
 Sizing guidance profiles are included under `config/`.
 
+## Profile mapping
+
+The `--profile` flag on `./scripts/deploy.sh` selects a compose override file. The `config/` files provide sizing guidance.
+
+| Device | Deploy profile | Compose override | Sizing guidance |
+|---|---|---|---|
+| Raspberry Pi 4 | `pi4` | `podman-compose.pi4.yml` | `config/pi4-8gb.yml` |
+| Raspberry Pi 5 | `pi5` | `podman-compose.pi5.yml` | `config/pi5-16gb.yml` |
+
 ## Deploy
 
 ### Raspberry Pi 4
