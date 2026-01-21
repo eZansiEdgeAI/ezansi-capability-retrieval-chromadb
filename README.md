@@ -37,6 +37,34 @@ curl -s -X POST http://localhost:8801/embeddings \
   -d '{"texts":["hello world","goodbye world"]}' | jq
 ```
 
+## Stop / restart
+
+- List running containers for this capability (useful when multiple capabilities are running):
+
+```bash
+podman ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}' | grep chromadb-retrieval || true
+```
+
+- Stop the stack (keeps volumes/data):
+
+```bash
+./scripts/stop.sh --down
+```
+
+- Restart the stack:
+
+```bash
+podman-compose up -d
+```
+
+- Stop and wipe persisted state (Chroma DB + embedding cache):
+
+```bash
+podman-compose down
+podman volume rm ezansi-capability-retrieval-chromadb_chroma-data
+podman volume rm ezansi-capability-retrieval-chromadb_embedding-cache
+```
+
 ## API
 
 - `GET /health`
