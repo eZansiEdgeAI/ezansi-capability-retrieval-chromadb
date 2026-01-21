@@ -33,7 +33,7 @@ services:
       - HF_HOME=/cache/hf
     restart: unless-stopped
     depends_on:
-      chroma:
+      chroma: {}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8801/health"]
       interval: 30s
