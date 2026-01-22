@@ -6,6 +6,16 @@ ChromaDB Retrieval capability for eZansiEdgeAI.
 **Provides:** `vector-search`, `text-embeddings`  
 **Purpose:** Upload content, index it, and query it (RAG retrieval)
 
+## Mental model (LEGO brick)
+
+If you’re a teacher/lecturer or student, think of this repo as **one LEGO brick** in an edge‑AI kit:
+
+- This capability provides the retrieval “brick” (embeddings + ingest/query)
+- `capability.json` describes the “studs” (what this brick can do)
+- [eZansi Platform Core](https://github.com/eZansiEdgeAI/ezansi-platform-core) is the “baseplate” (one gateway that discovers bricks and routes requests)
+
+For a cold-start checklist (standalone + via the gateway), start here:
+
 ## Quickstart Manual Test
 
 - Standalone + via platform-core gateway: [docs/quickstart-manual-test.md](docs/quickstart-manual-test.md)

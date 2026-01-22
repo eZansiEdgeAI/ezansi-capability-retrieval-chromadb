@@ -2,6 +2,15 @@
 
 This folder contains operational and design documentation for the `chromadb-retrieval` capability.
 
+## Mental model (LEGO brick)
+
+If you’re a teacher/lecturer or student, think of this capability as **one LEGO brick**.
+
+- `capability.json` describes the “studs” (what this brick provides)
+- [eZansi Platform Core](https://github.com/eZansiEdgeAI/ezansi-platform-core) is the “baseplate” (one gateway that discovers bricks and routes requests)
+
+Start with the cold-start checklist: [Quickstart Manual Test](quickstart-manual-test.md)
+
 ## Quick links
 
 - [Quickstart Manual Test](quickstart-manual-test.md)
