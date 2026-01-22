@@ -4,6 +4,7 @@ This folder contains operational and design documentation for the `chromadb-retr
 
 ## Quick links
 
+- [Quickstart Manual Test](quickstart-manual-test.md)
 - [Architecture](architecture.md)
 - [Capability contract](capability-contract-spec.md)
 - [Deployment guide](deployment-guide.md)

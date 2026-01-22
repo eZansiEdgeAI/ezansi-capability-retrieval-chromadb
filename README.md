@@ -6,6 +6,10 @@ ChromaDB Retrieval capability for eZansiEdgeAI.
 **Provides:** `vector-search`, `text-embeddings`  
 **Purpose:** Upload content, index it, and query it (RAG retrieval)
 
+## Quickstart Manual Test
+
+- Standalone + via platform-core gateway: [docs/quickstart-manual-test.md](docs/quickstart-manual-test.md)
+
 ## Documentation
 
 - Docs index: `docs/README.md`
