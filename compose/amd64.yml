@@ -2,7 +2,7 @@ version: '3.8'
 
 # AMD64 overrides for the chromadb-retrieval capability stack.
 # Usage:
-#   podman-compose -f podman-compose.yml -f podman-compose.amd64.yml up -d --build
+#   podman-compose -f ./podman-compose.yml -f ./compose/amd64.yml up -d --build
 
 services:
   chroma:

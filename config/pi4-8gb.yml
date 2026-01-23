@@ -1,5 +1,5 @@
 # Raspberry Pi 4 (8GB) suggested runtime profile.
-# Applied via: podman-compose -f podman-compose.yml -f podman-compose.pi4.yml up -d --build
+# Applied via: podman-compose -f ./podman-compose.yml -f ./compose/pi4.yml up -d --build
 profile: pi4-8gb
 resources:
   cpu_cores: 2

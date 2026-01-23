@@ -28,8 +28,8 @@ The `--profile` flag on `./scripts/deploy.sh` selects a compose override file. T
 
 | Device | Deploy profile | Compose override | Sizing guidance |
 |---|---|---|---|
-| Raspberry Pi 4 | `pi4` | `podman-compose.pi4.yml` | `config/pi4-8gb.yml` |
-| Raspberry Pi 5 | `pi5` | `podman-compose.pi5.yml` | `config/pi5-16gb.yml` |
+| Raspberry Pi 4 | `pi4` | `compose/pi4.yml` | `config/pi4-8gb.yml` |
+| Raspberry Pi 5 | `pi5` | `compose/pi5.yml` | `config/pi5-16gb.yml` |
 
 ## Deploy
 
@@ -43,7 +43,7 @@ The `--profile` flag on `./scripts/deploy.sh` selects a compose override file. T
 Equivalent manual command:
 
 ```bash
-podman-compose -f podman-compose.yml -f podman-compose.pi4.yml up -d --build
+podman-compose -f ./podman-compose.yml -f ./compose/pi4.yml up -d --build
 ```
 
 ### Raspberry Pi 5
@@ -56,7 +56,7 @@ podman-compose -f podman-compose.yml -f podman-compose.pi4.yml up -d --build
 Equivalent manual command:
 
 ```bash
-podman-compose -f podman-compose.yml -f podman-compose.pi5.yml up -d --build
+podman-compose -f ./podman-compose.yml -f ./compose/pi5.yml up -d --build
 ```
 
 ## Performance notes

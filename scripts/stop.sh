@@ -56,13 +56,13 @@ compose_down() {
 		"")
 			;;
 		pi4)
-			COMPOSE_FILES+=("-f" "podman-compose.pi4.yml")
+			COMPOSE_FILES+=("-f" "compose/pi4.yml")
 			;;
 		pi5)
-			COMPOSE_FILES+=("-f" "podman-compose.pi5.yml")
+			COMPOSE_FILES+=("-f" "compose/pi5.yml")
 			;;
 		amd64)
-			COMPOSE_FILES+=("-f" "podman-compose.amd64.yml")
+			COMPOSE_FILES+=("-f" "compose/amd64.yml")
 			;;
 		*)
 			echo "Unknown profile: $PROFILE" >&2

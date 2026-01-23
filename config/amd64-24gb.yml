@@ -1,5 +1,5 @@
 # AMD64 (24GB) suggested runtime profile.
-# Applied via: podman-compose -f podman-compose.yml -f podman-compose.amd64.yml up -d --build
+# Applied via: podman-compose -f ./podman-compose.yml -f ./compose/amd64.yml up -d --build
 profile: amd64-24gb
 resources:
   cpu_cores: 2

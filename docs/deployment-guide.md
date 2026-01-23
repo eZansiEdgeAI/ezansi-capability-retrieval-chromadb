@@ -16,6 +16,12 @@ From the repository root:
 podman-compose up -d --build
 ```
 
+Recommended (all devices): run the preflight selector to see the exact base+override command:
+
+```bash
+./scripts/choose-compose.sh
+```
+
 ### Device profiles (Raspberry Pi / AMD64)
 
 For parity with other eZansiEdgeAI capabilities, this repository includes optional **compose override files** and a small set of **hardware profile hints** under `config/`.
@@ -43,7 +49,7 @@ Recommended options:
 Under the hood these map to:
 
 - `podman-compose.yml` (base)
-- `podman-compose.pi4.yml` / `podman-compose.pi5.yml` / `podman-compose.amd64.yml` (resource overrides)
+- `compose/pi4.yml` / `compose/pi5.yml` / `compose/amd64.yml` (resource overrides)
 
 The profile YAML files in `config/` are guidance for sizing and documentation; deployment is controlled by the compose overrides.
 

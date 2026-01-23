@@ -2,7 +2,7 @@ version: '3.8'
 
 # Raspberry Pi 4 overrides for the chromadb-retrieval capability stack.
 # Usage:
-#   podman-compose -f podman-compose.yml -f podman-compose.pi4.yml up -d --build
+#   podman-compose -f ./podman-compose.yml -f ./compose/pi4.yml up -d --build
 
 services:
   chroma:

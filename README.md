@@ -89,6 +89,7 @@ podman volume rm ezansi-capability-retrieval-chromadb_embedding-cache
 
 ## Scripts
 
+- `scripts/choose-compose.sh`: preflight selector (prints the exact base+override compose command)
 - `scripts/deploy.sh`: build + start the stack
 - `scripts/health-check.sh`: basic health check (used for quick diagnostics)
 - `scripts/validate-deployment.sh`: smoke test (health, contract, embeddings, ingest, query)
@@ -97,9 +98,9 @@ podman volume rm ezansi-capability-retrieval-chromadb_embedding-cache
 
 This repository includes optional compose override files (similar to other capability repos):
 
-- `podman-compose.pi4.yml`
-- `podman-compose.pi5.yml`
-- `podman-compose.amd64.yml`
+- `compose/pi4.yml`
+- `compose/pi5.yml`
+- `compose/amd64.yml`
 
 Sizing guidance lives in `config/`.
 
